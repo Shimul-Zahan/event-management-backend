@@ -9,6 +9,7 @@ const allTask = require('./src/routes/routes')
 const postTask = require('./src/routes/routes');
 const updateTask = require('./src/routes/routes');
 const deleteTask = require('./src/routes/routes');
+const editTask = require('./src/routes/routes');
 const connectMiddleware = require('./src/middleware/middleware');
 
 connectMiddleware(app);
@@ -16,6 +17,7 @@ app.use(allTask);
 app.use(postTask);
 app.use(updateTask);
 app.use(deleteTask);
+app.use(editTask);
 
 
 app.get('/health', (req, res) => {
