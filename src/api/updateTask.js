@@ -16,6 +16,7 @@ const updateTasks = async (req, res) => {
     }
 
     const result = await Task.updateOne({ _id }, updateQuery);
+    res.send(result);
     console.log("from the last", result)
 }
 
